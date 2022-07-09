@@ -18,27 +18,27 @@ const questions = [
         message: "Description of the project:"
         
         },
-        {
-        type:"input",
-        name:"tableOfContents",
-        message: "Add Your Table of Contents Sections"
+        // { already in the pro readme
+        // type:"input",
+        // name:"tableOfContents",
+        // message: "Add Your Table of Contents Sections"
 
-        },
+        // },
         {
         type:"input",
-        name: "Installation",
+        name: "installation",
         message: "Describe installation process:"
         
         },
         {
         type: "input",
-        name: "Usage",
+        name: "usage",
         message: "How to use this program:",
 
         },
         {
         type: "input",
-        name:"License",
+        name:"license",
         message: "Licenses used:"
                 
         },
@@ -50,13 +50,13 @@ const questions = [
         },
         {
         type: "input",
-        name: "Tests",
+        name: "tests",
         message: "Tests performed:"
 
         },
         {
         type: "input",
-        name: "Questions",
+        name: "questions",
         message: "What Questions or Improvement suggestions do you want to add?"
         
         }
