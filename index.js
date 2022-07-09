@@ -1,26 +1,26 @@
 // To bring in our JSON utilities and dependencies
 const fs = require('fs');
 const inquirer = require("inquirer");
-const utility = require("utility");
 
 
+const generateReadme = require("./utility/generateReadme.js");
 
 const questions = [
         {
 
         type: "input",
-        name: "Title",
+        name: "title",
         message: "What is the title?"
         },
         {
         type: "input",
-        name: "Description",
+        name: "description",
         message: "Description of the project:"
         
         },
         {
         type:"input",
-        name:"Table of Contents",
+        name:"tableOfContents",
         message: "Add Your Table of Contents Sections"
 
         },
@@ -62,7 +62,7 @@ const questions = [
         }
 ]
 
-function fileCreator(filename, data)
+function fileCreator(fileName, data)
 {
         fs.writeFile(fileName, data, function(err){
                 console.log(fileName)
@@ -81,8 +81,10 @@ function runProgram()
 {
         inquirer.prompt(questions)
         .then(function(data){
-                fileCreator("README.md", generateReadme.js(data));
+                fileCreator("README.md", generateReadme(data));
                 console.log(data)
         })
 
 }
+
+runProgram();
